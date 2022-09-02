@@ -1,0 +1,146 @@
+.news {
+  padding-top: 90px;
+  font-family: "Open Sans";
+  font-style: normal;
+  /* or 156% */
+
+  color: #000000;
+}
+
+.news__title {
+  font-family: "Conthrax";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 100px;
+  color: #000000;
+
+  position: relative;
+}
+
+.news__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.news__title::after {
+  content: "";
+  background-color: #0a72cd;
+  position: absolute;
+  width: 30%;
+  height: 120%;
+  filter: blur(80px);
+  bottom: 0;
+  right: 70%;
+  z-index: -10;
+}
+
+.news__subtitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 50px;
+  align-self: flex-end;
+  text-align: left;
+  max-width: 55%;
+}
+
+.news__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 100px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.news__post {
+  border: #0a72cd 2px solid;
+  box-shadow: 5px 5px 10px#0a72cd;
+  max-width: 580px;
+  padding: 30px 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news__post-title {
+  padding-top: 10px;
+}
+
+.news__post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.news__post-button {
+  padding: 10px 15px;
+  background-color: #0a72cd;
+  border-radius: 30px;
+  color: #ffffff;
+  text-decoration: underline;
+  border: #ffffff 1px solid;
+  filter: drop-shadow(5px 2px 3px #0a72cd);
+}
+
+.news__post-date {
+  font-size: 17px;
+  color: #0a72cd;
+  font-style: italic;
+}
+
+.news__post-subtitle {
+  max-height: 350px;
+  overflow: hidden;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.news__post-image {
+  border-radius: 30px;
+  border: #0a72cd 2px solid;
+  width: 100%;
+}
+
+@media (max-width: 940px) {
+  .news__subtitle {
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .news__subtitle {
+    max-width: 100%;
+  }
+  
+}
+
+@media (max-width: 520px) {
+
+  .news__title {
+    font-size: 37px;
+    line-height: 45px;
+  }
+
+  .news__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .news__post-subtitle {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  .news__post-title {
+    line-height: 25px;
+    font-size: 20px;
+  }
+  
+}

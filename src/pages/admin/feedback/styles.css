@@ -1,0 +1,76 @@
+.feedback {
+    padding-top: 50px;
+  }
+  
+  .feedback__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feedback__title {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .feedback__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10px;
+  }
+  
+  .feedback__item {
+    max-width: 800px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .feedback__item-text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: start;
+  
+    max-width: 190px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .feedback__delete-button {
+      background-color: #ff0000;
+      padding: 5px 10px;
+      border-radius: 15px;
+      color: #fff;
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+    
+    .feedback__delete-button:hover {
+      background-color: transparent;
+      color: #ff0000;
+    }
+    
+    
+    @media (max-width: 400px) {
+      .feedback-text {
+        font-size: 16px;
+        max-width: 250px;
+      }
+      
+    }

@@ -1,0 +1,31 @@
+.certificates {
+  padding-top: 50px;
+}
+
+.certificate__inner {
+  width: 100%;
+}
+
+.certificate__image {
+  width: 100%;
+  filter: drop-shadow(1px 1px 5px #0a72cd);
+}
+
+.certificates__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.certificate__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #0a72cd;
+}

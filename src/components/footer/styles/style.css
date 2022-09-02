@@ -1,0 +1,124 @@
+.footer {
+  padding-top: 10%;
+  overflow-y: hidden;
+  font-family: "Conthrax";
+  font-style: normal;
+  flex: 0 0 auto;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  border-top: 2px solid #a0a0a0;
+}
+
+.footer__logo {
+  color: #ffffff;
+  position: relative;
+}
+
+.footer__logo-title {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  filter: drop-shadow(10px 10px 10px #0a72cd);
+}
+
+.footer__logo-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.13em;
+  filter: drop-shadow(10px 10px 10px #0a72cd);
+}
+
+.footer__logo::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 750%;
+  left: -50%;
+  bottom: -550px;
+
+  background: #0a72cd;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.footer__telephone,
+.footer__address,
+.footer__telephone-description {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0.13em;
+  color: #7f7f80;
+  padding-bottom: 40px;
+}
+
+.footer__telephone {
+  padding-bottom: 0px;
+}
+
+.footer__telephone-description {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 1072px) {
+  .footer__logo::before {
+    bottom: -750px;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer__inner {
+    flex-direction: column-reverse;
+  }
+  .footer__logo::before {
+    bottom: -550px;
+  }
+}
+
+@media (max-width: 614px) {
+  .footer__logo::before {
+    bottom: -750px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__logo-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .footer__telephone {
+      font-size: 18px;
+  }
+}
