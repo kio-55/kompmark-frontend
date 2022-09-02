@@ -41,7 +41,7 @@ const CertificatePage = () => {
               <div className="certificate">
                 <h1 className="certificate__title">{certificate.title}</h1>
                 <img
-                  src={`http://localhost:8000${certificate.imageUrl}`}
+                  src={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}
                   alt=""
                   className="certificate__image"
                 />
