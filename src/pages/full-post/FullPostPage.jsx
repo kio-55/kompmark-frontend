@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import "./styles/style.css";
 import { useDispatch } from "react-redux";
 import { fetchPostByID } from "../../web/redux/slices/post/post";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
 
 const FullPostPage = () => {
   const dispatch = useDispatch();
@@ -59,8 +59,13 @@ const FullPostPage = () => {
         <div className="post__inner">
           <h1 className="post__title">{post.title}</h1>
           <h2 className="post__subtitle">{post.subtitle}</h2>
-          {checkImg(post)}
-          <ReactMarkdown className="post__text" children={post.text}></ReactMarkdown>
+          <div className="post__info">
+            {checkImg(post)}
+            <ReactMarkdown
+              className="post__text"
+              children={post.text}
+            ></ReactMarkdown>
+          </div>
           <p className="post__date">
             {new Date(post.createdAt).toLocaleDateString()}
           </p>

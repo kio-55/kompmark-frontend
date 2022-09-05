@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer__logo">
             <h1 className="footer__logo-title">Компмарк</h1>
             <h2 className="footer__logo-subtitle">
-              © 2011-2022 ООО “Компмарк”, ИНН 1234567890
+              © 2011-2022 ООО “Компмарк”, ИНН 5506233249
             </h2>
           </div>
           <div className="footer__contacts">
@@ -59,8 +59,8 @@ const Footer = () => {
               >
                 г.Омск, ул. 5 Линия, д.157а
               </a>
-              <a href="tel: 83812961010" className="footer__telephone">
-                8 (3812) 96-10-10{" "}
+              <a href="tel: 83812951010" className="footer__telephone">
+                8 (3812) 95-10-10{" "}
               </a>
               <h3 className="footer__telephone-description">
                   Для звонков по России

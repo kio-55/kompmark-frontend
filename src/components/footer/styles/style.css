@@ -32,7 +32,7 @@
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.13em;
-  filter: drop-shadow(10px 10px 10px #0a72cd);
+  text-shadow: 2px 2px 7px #0a72cd;
 }
 
 .footer__logo::before {

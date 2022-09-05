@@ -12,39 +12,6 @@ import kyo from "./images/kyocera.png";
 import oki from "./images/oki.png";
 import xerox from "./images/xerox.png";
 
-/* const rewiews = [
-  {
-    title: "Быстрый выбор. Качественная сборка sdffsdf sdf sdf sdfdsf sdf f ",
-    text: "Долго не могла решится собрать компьютер. Благодаря знакомому познакомилась  с компанией Компмарк. Отличные ребята. Помогли всё выбрать. Ещё и самостоятельно собрали и доставили ПК домой. Молодцы!",
-    stars: 5,
-    author: "Александр. Н.",
-  },
-  {
-    title: "Замечательные ребята",
-    text: "Быстро, качественно, не дорого. Имеено так можно охарактеризовать эту команду. Большие молодцы! Обязательно вернусь ещё",
-    stars: 5,
-    author: "Вячеслав Анатольевич",
-  },
-  {
-    title: "Хорошая техника",
-    text: "“ Ребята большие молодцы. Всегда очень оперативно работают. всё подскажут, покажут. Спасибо! ”",
-    stars: 5,
-    author: "Александр. Н.",
-  },
-  {
-    title: "Быстрый выбор. Качественная сборка",
-    text: "Долго не могла решится собрать компьютер. Благодаря знакомому познакомилась  с компанией Компмарк. Отличные ребята. Помогли всё выбрать. Ещё и самостоятельно собрали и доставили ПК домой. Молодцы!",
-    stars: 5,
-    author: "Александр. Н.",
-  },
-  {
-    title: "Быстрый выбор. Качественная сборка",
-    text: "Долго не могла решится собрать компьютер. Благодаря знакомому познакомилась  с компанией Компмарк. Отличные ребята. Помогли всё выбрать. Ещё и самостоятельно собрали и доставили ПК домой. Молодцы!",
-    stars: 5,
-    author: "Александр. Н.",
-  },
-]; */
-
 const MainPage = () => {
   return (
     <>
@@ -52,7 +19,7 @@ const MainPage = () => {
         <div className="container">
           <div className="about__inner">
             <h1 className="about__title">
-              О <br className="about__title-br" /> нас
+              О нас
             </h1>
             <p className="about__text about__text_right">
               Мы компания, которая сделает вашу жизнь проще. Просто скажите чего
@@ -129,19 +96,6 @@ const MainPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="comments">
-        <div className="container">
-          <div className="comments__inner">
-            <h1 className="comments__title">Отзывы наших пользователей</h1>
-            <h3 className="comments__subtitle">
-              Наш успех определяется благодаря вам
-            </h3>
-          </div>
-        </div>
-        <div className="comments__slider">
-          <Slider></Slider>
         </div>
       </section>
       <section className="statistic">

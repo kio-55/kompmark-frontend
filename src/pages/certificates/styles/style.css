@@ -6,8 +6,20 @@
   width: 100%;
 }
 
-.certificate__image {
+.certificates__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
+}
+
+.certificate {
+  max-width: 45%;
+}
+
+.certificate__image {
+  max-width: 100%;
   filter: drop-shadow(1px 1px 5px #0a72cd);
 }
 
@@ -28,4 +40,5 @@
   font-size: 25px;
   line-height: 30px;
   color: #0a72cd;
+  max-width: 100%;
 }

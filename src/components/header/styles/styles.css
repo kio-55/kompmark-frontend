@@ -58,7 +58,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 510px) {
     .header__logo-text {
         font-size: 32px;
         line-height: 40px;

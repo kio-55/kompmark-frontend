@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "../../web/axios";
 
 import { TailSpin } from "react-loader-spinner";
@@ -20,33 +20,37 @@ const CertificatePage = () => {
   }, []);
 
   if (isLoading) {
-    return <TailSpin
-    height="200px"
-    width="100%"
-    color="#0A72CD"
-    ariaLabel="tail-spin-loading"
-    radius="1"
-    wrapperStyle={{}}
-    wrapperClass=""
-    visible={true}
-  />
+    return (
+      <TailSpin
+        height="200px"
+        width="100%"
+        color="#0A72CD"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
+    );
   }
   return (
     <>
       <section className="certificates">
         <div className="container">
           <div className="certificates__inner">
-              <h1 className="certificates__title">Сертификаты</h1>
-            {certificates.map((certificate) => (
-              <div className="certificate">
-                <h1 className="certificate__title">{certificate.title}</h1>
-                <img
-                  src={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}
-                  alt=""
-                  className="certificate__image"
-                />
-              </div>
-            ))}
+            <h1 className="certificates__title">Сертификаты</h1>
+            <div className="certificates__list">
+              {certificates.map((certificate) => (
+                <div className="certificate">
+                  <h1 className="certificate__title">{certificate.title}</h1>
+                  <img
+                    src={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}
+                    alt=""
+                    className="certificate__image"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
