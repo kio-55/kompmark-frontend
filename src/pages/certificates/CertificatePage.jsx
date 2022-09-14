@@ -39,17 +39,43 @@ const CertificatePage = () => {
         <div className="container">
           <div className="certificates__inner">
             <h1 className="certificates__title">Сертификаты</h1>
-            <div className="certificates__list">
-              {certificates.map((certificate) => (
-                <div className="certificate">
-                  <h1 className="certificate__title">{certificate.title}</h1>
-                  <img
-                    src={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}
-                    alt=""
-                    className="certificate__image"
-                  />
-                </div>
-              ))}
+            <div className="certificates__content">
+              <div className="certificates__list certificates__list_right">
+                {certificates
+                  .filter((elem, i) => i % 2 == 0)
+                  .map((certificate) => (
+                    <div className="certificate">
+                      <h1 className="certificate__title">
+                        {certificate.title}
+                      </h1>
+                      <a href={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}>
+                        <img
+                          src={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}
+                          alt=""
+                          className="certificate__image"
+                        />
+                      </a>
+                    </div>
+                  ))}
+              </div>
+              <div className="certificates__list certificates__list_left">
+                {certificates
+                  .filter((elem, i) => i % 2 !== 0)
+                  .map((certificate) => (
+                    <div className="certificate">
+                      <h1 className="certificate__title">
+                        {certificate.title}
+                      </h1>
+                      <a href={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}>
+                      <img
+                        src={`${process.env.REACT_APP_BACKEND}${certificate.imageUrl}`}
+                        alt=""
+                        className="certificate__image"
+                      />
+                      </a>
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
