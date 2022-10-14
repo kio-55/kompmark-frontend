@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/main/MainLayout";
 import MainPage from "./pages/main/MainPage";
 import TechnicalPage from "./pages/technical/TechnicalPage";
@@ -15,22 +15,23 @@ import "./fonts/opensans.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LoginPage from "./pages/login/LoginPage";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchAuthMe, selectIsAuth } from "./web/redux/slices/auth/auth";
+import { useDispatch } from "react-redux";
+import { fetchAuthMe } from "./web/redux/slices/auth/auth";
 import AdminLayout from "./layouts/admin/AdminLayout";
 import AdminPostPage from "./pages/admin/posts/AdminPostPage";
 import CreatePostPage from "./pages/admin/posts/create/CreatePostPage";
 import AdminCertificatesPage from "./pages/admin/certificates/AdminCertificatesPage";
 import CertificatesCreatePage from "./pages/admin/certificates/create/CertificatesCreatePage";
 import FeedbackPage from "./pages/admin/feedback/Feedback";
+import AdminJobPage from "./pages/admin/jobs/AdminJobPage";
+import JobsCreatePage from "./pages/admin/jobs/create/JobsCreatePage";
 
 function App() {
   const dispatch = useDispatch();
-  const isAuth = useSelector(selectIsAuth);
 
   React.useEffect(() => {
     dispatch(fetchAuthMe());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>
@@ -52,6 +53,8 @@ function App() {
         <Route path="/admin/posts/update/:id" element={<CreatePostPage />} />
         <Route path="/admin/certificates" element={<AdminCertificatesPage />} />
         <Route path="/admin/certificates/create" element={<CertificatesCreatePage />} />
+        <Route path="/admin/jobs" element={<AdminJobPage />} />
+        <Route path="/admin/jobs/create" element={<JobsCreatePage />} />
         <Route path="/admin/help" element={<FeedbackPage />} />
       </Route>
 

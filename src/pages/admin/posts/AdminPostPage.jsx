@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchPosts, fetchRemovePosts } from "../../../web/redux/slices/post/post";
+import { fetchPosts } from "../../../web/redux/slices/post/post";
 import ShortPost from "./components/short-post/ShortPost";
 
 import "./styles/styles.css";
@@ -12,7 +12,7 @@ const AdminPostPage = () => {
 
     useEffect(() => {
         dispatch(fetchPosts());
-    }, []);
+    }, [dispatch]);
 
   return (
     <div className="admin-posts">

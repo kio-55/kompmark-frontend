@@ -9,7 +9,7 @@ const FeedbackPage = () => {
 
   const onClick = async (id) => {
     await axios.delete(`/api/help/${id}`);
-    setData(data.filter(obj => obj._id != id));
+    setData(data.filter(obj => obj._id !== id));
   };
 
   const fetchFeedback = async () => {

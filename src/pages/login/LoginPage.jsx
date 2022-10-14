@@ -14,8 +14,6 @@ const LoginPage = () => {
   const {
     register,
     handleSubmit,
-    setError,
-    formState: { errors, isValid },
   } = useForm({
     defaultValues: {
       username: "",
@@ -65,7 +63,7 @@ const LoginPage = () => {
               placeholder="Пароль"
               className="login__form-item-input"
             />
-            {status == "error" ? (
+            {status === "error" ? (
               <h1 className="login__error">Логин или пароль неверны!</h1>
             ) : (
               <></>

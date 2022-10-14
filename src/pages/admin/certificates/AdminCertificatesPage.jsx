@@ -15,15 +15,15 @@ const AdminCertificatesPage = () => {
   const dispatch = useDispatch();
   const certificates = useSelector((store) => store.certificates.data);
 
-  const fetchData = async () => {
-    setLoading(true);
-    await dispatch(fetchCertificates());
-    setLoading(false);
-  }
-
   useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      await dispatch(fetchCertificates());
+      setLoading(false);
+    }
+
     fetchData()
-  }, []);
+  }, [dispatch]);
 
   const onClick = (id) => {
     dispatch(fetchDeleteCertificate(id));

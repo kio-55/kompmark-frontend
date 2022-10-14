@@ -1,11 +1,9 @@
 import React from "react";
 
-import Slider from "../../components/slider/RewiewSlider";
 import ContactForm from "../../components/contact-form/ContactForm";
 
 import "./styles/style.css";
 
-import photo from "./images/Foto.png";
 import bulat from "./images/bulat.png";
 import kasp from "./images/kaspersky.png";
 import kyo from "./images/kyocera.png";

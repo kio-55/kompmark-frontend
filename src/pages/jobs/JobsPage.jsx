@@ -1,23 +1,26 @@
 import React, {useState} from "react";
-import axios from "../../web/axios";
+import { useDispatch, useSelector } from "react-redux";
+
+import { fetchJobs } from "../../web/redux/slices/jobs/job";
 
 import { TailSpin } from "react-loader-spinner";
 
 import "./styles/style.css";
 
 const JobsPage = () => {
-  const [jobs, setJobs] = useState();
+  const dispatch = useDispatch();
+  const jobs = useSelector((store) => store.jobs.jobs.items);
   const [isLoading, setLoading] = useState(true);
 
+  const fetchData = async () => {
+    setLoading(true);
+    await dispatch(fetchJobs());
+    setLoading(false);
+  }
 
   React.useEffect(() => {
-    axios
-      .get(`/api/jobs`)
-      .then((res) => {
-        setJobs(res.data);
-        setLoading(false);
-      })
-      .catch((err) => console.warn(err));
+    fetchData();
+    console.log(jobs);
   }, []);
 
   if (isLoading) {

@@ -13,7 +13,10 @@ const NewsPage = () => {
     axios
       .get("/api/posts")
       .then((res) => {
-        setNews(res.data);
+        setNews(res.data.sort((a, b) => {
+          const dateA=new Date(a.createdAt), dateB=new Date(b.createdAt)
+          return dateB - dateA
+        }));
         setLoading(false);
       })
       .catch((err) => console.warn(err));
@@ -21,7 +24,7 @@ const NewsPage = () => {
 
   const getNews = (even) => (
     <div className="news__list">
-      {news.filter((elem, i) => even ? i % 2 == 0 : i % 2 !== 0).map((post) => {
+      {news.filter((elem, i) => even ? i % 2 === 0 : i % 2 !== 0).map((post) => {
         let image;
         if (post.imageUrl) {
           image = (

@@ -42,7 +42,7 @@ const CertificatePage = () => {
             <div className="certificates__content">
               <div className="certificates__list certificates__list_right">
                 {certificates
-                  .filter((elem, i) => i % 2 == 0)
+                  .filter((elem, i) => i % 2 === 0)
                   .map((certificate) => (
                     <div className="certificate">
                       <h1 className="certificate__title">

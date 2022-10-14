@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import SimpleMDE from "react-simplemde-editor";
 
 import "./styles/styles.css";
@@ -15,7 +15,7 @@ import {
 
 const CreatePostPage = () => {
   const navigate = useNavigate();
-  const [isLoading, setLoading] = React.useState(false);
+  const [setLoading] = React.useState(false);
   const [value, setValue] = React.useState("");
   const [title, setTitle] = React.useState("");
   const [subtitle, setSubtitle] = React.useState("");

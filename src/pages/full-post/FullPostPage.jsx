@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "../../web/axios";
 import { TailSpin } from "react-loader-spinner";
 import { useParams } from "react-router-dom";
 

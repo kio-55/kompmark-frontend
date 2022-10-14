@@ -63,7 +63,7 @@ const certificatesSlice = createSlice({
       //delete certificate
       [fetchDeleteCertificate.fulfilled]: (state, action) => {
         state.status = "loaded";
-        state.data = state.data.filter(obj => obj._id != action.meta.arg);
+        state.data = state.data.filter(obj => obj._id !== action.meta.arg);
       },
   },
 });
